@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { NavLink, Link } from 'react-router'
+import Logo from '../../../assets/Image/logo.png'
 const Header = () => {
     const [isMobileNavActive, setMobileNavActive] = useState(false);
     const [dropdownStates, setDropdownStates] = useState({});
@@ -29,6 +30,7 @@ const Header = () => {
                     >
                         {/* Uncomment the line below if you also wish to use an image logo */}
                         {/* <img src="assets/img/logo.png" alt=""> */}
+                        <img src={Logo} alt="Logo" />
                         <h1 className="sitename">HCP</h1>
                     </Link>
                 </div>
