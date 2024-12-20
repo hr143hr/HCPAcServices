@@ -120,7 +120,7 @@ const Header = () => {
                         onClick={toggleMobileNav}
                     />
                 </nav>
-                <div className="d-flex align-items-center">
+                <div className="d-flex align-items-center ">
                     <Link className="pe-2" to="#">
                         <i className="bi bi-bag-dash fs-2 myicon"></i>
                     </Link>
