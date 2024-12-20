@@ -156,8 +156,8 @@
   }
   
   .header .logo img {
-    max-height: 36px;
-    margin-right: 8px;
+    max-height: 59px;
+    margin-right: 2px;
   }
   
   .header .logo h1 {
@@ -702,7 +702,9 @@ section,
 .myicon{
   text-shadow:2px 2px 4px #2e2c2c;
 }
-
+.myslider{
+  border-radius: 8px;
+}
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -787,20 +789,7 @@ section,
   font-size: 1.25rem;
 }
 
-.hero .btn-primary {
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
-  color: var(--contrast-color);
-  padding: 0.75rem 2.5rem;
-  border-radius: 50px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
 
-.hero .btn-primary:hover {
-  background-color: color-mix(in srgb, var(--accent-color), black 20%);
-  border-color: color-mix(in srgb, var(--accent-color), black 20%);
-}
 
 .hero .btn-link {
   color: var(--heading-color);
@@ -822,6 +811,7 @@ section,
   position: relative;
   text-align: center;
   z-index: 1;
+  bottom: 44px;
 }
 
 .hero .hero-image img {
@@ -831,50 +821,17 @@ section,
 
 .hero .customers-badge {
   position: absolute;
-  bottom: 10px;
-  right: 30px;
-  background-color: var(--surface-color);
-  padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  max-width: 300px;
+  bottom: -80px;
+  right: 250px;
+  max-width: 325px;
   animation: float-badge 3s ease-in-out infinite;
   will-change: transform;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.329);
+  border-radius: 8px;
 }
-
-.hero .customers-badge .customer-avatars {
-  display: flex;
-  align-items: center;
-  margin-bottom: 0.5rem;
+.hero .customers-badge h5{
+color: #6176ec;
 }
-
-.hero .customers-badge .avatar {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  border: 2px solid var(--surface-color);
-  margin-left: -8px;
-}
-
-.hero .customers-badge .avatar:first-child {
-  margin-left: 0;
-}
-
-.hero .customers-badge .avatar.more {
-  background-color: var(--accent-color);
-  color: var(--contrast-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.75rem;
-  font-weight: 600;
-}
-
-.hero .customers-badge p {
-  font-size: 0.875rem;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-}
-
 @media (max-width: 992px) {
   .hero .customers-badge {
     position: static;
@@ -936,8 +893,8 @@ section,
 }
 
 .hero .stat-item .stat-content p {
-  font-size: 0.875rem;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  font-size: 0.975rem;
+  color: color-mix(in srgb, var(--default-color), #53a8ffeb 40%);
   margin: 0;
 }
 
