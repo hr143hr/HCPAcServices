@@ -34,7 +34,7 @@ const Home = () => {
                                     </p> */}
                                     <div className="hero-buttons">
                                         <Link to="#about" className="btn btn-primary  me-0 me-sm-2 mx-1">
-                                            Bye Now
+                                            Buy Now
                                         </Link>
                                         <Link to="#about" className="btn btn-warning  me-0 me-sm-2 mx-1">
                                             Book Now
