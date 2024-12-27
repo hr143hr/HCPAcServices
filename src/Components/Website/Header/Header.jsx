@@ -31,89 +31,47 @@ const Header = () => {
                         {/* Uncomment the line below if you also wish to use an image logo */}
                         {/* <img src="assets/img/logo.png" alt=""> */}
                         <img src={Logo} alt="Logo" />
-                       
+
                     </Link>
                 </div>
                 <nav id="navmenu" className="navmenu">
                     <ul>
                         <li>
-                            <NavLink to="/" onClick={toggleMobileNav}>
+                            <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
                                 Home
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/about" onClick={toggleMobileNav}>About</NavLink>
+                            <NavLink to="about">About</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/contact" onClick={toggleMobileNav}>Contact</NavLink>
+                            <NavLink to="services">Services</NavLink>
                         </li>
-                        <li
-                            className={`dropdown ${dropdownStates["product"] ? "active" : ""
-                                }`}
-                        >
-                            <Link
-                                to="#"
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    toggleDropdown("product");
-                                }}
+                        <li>
+                            <NavLink to="contact">Contact</NavLink>
+                        </li>
+                        <li className="dropdown">
+                            <NavLink
+                                to="/products" // Base path for the Products dropdown
+                                className={({ isActive }) =>
+                                    isActive || window.location.pathname === "/newac" || window.location.pathname === "/acaccessories"
+                                        ? "active"
+                                        : ""
+                                }
+                                onClick={() => toggleDropdown("mainDropdown")}
                             >
-                                <span>Product</span>
-                                {/* Toggle between "open" and "close" icon */}
-                                <i
-                                    className={`bi ${dropdownStates["product"]
-                                        ? "bi-chevron-up"
-                                        : "bi-chevron-down"
-                                        } toggle-dropdown`}
-                                />
-                            </Link>
-                            <ul
-                                className={`dropdown-menu ${dropdownStates["product"] ? "dropdown-active" : ""
-                                    }`}
-                            >
+                                Products <i className="bi bi-chevron-down toggle-dropdown" />
+                            </NavLink>
+                            <ul className={`${dropdownStates.mainDropdown ? "show" : ""}`}>
                                 <li>
-                                    <NavLink to="/newac" onClick={toggleMobileNav}>New AC</NavLink>
+                                    <NavLink to="#newac">New AC</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/acparts" onClick={toggleMobileNav}>AC Parts</NavLink>
+                                    <NavLink to="#acaccessories">AC Accessories</NavLink>
                                 </li>
                             </ul>
                         </li>
-                        {/* <li
-                            className={`dropdown ${
-                                dropdownStates["part"] ? "active" : ""
-                            }`}
-                        >
-                            <a
-                                to="#"
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    toggleDropdown("part");
-                                }}
-                            >
-                                <span>Part</span>
-                                
-                                <i
-                                    className={`bi ${
-                                        dropdownStates["part"]
-                                            ? "bi-chevron-up"
-                                            : "bi-chevron-down"
-                                    } toggle-dropdown`}
-                                />
-                            </a>
-                            <ul
-                                className={`dropdown-menu ${
-                                    dropdownStates["part"] ? "dropdown-active" : ""
-                                }`}
-                            >
-                                <li>
-                                    <a to="#">New Part</a>
-                                </li>
-                                <li>
-                                    <a to="#">Old Part</a>
-                                </li>
-                            </ul>
-                        </li> */}
+
                     </ul>
                     <i
                         className={`mobile-nav-toggle d-xl-none bi ${isMobileNavActive ? "bi-x" : "bi-list"}`}
