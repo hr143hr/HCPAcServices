@@ -3,9 +3,9 @@
 :root {
   --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
-  --heading-font: "Source Sans Pro", sans-serif !important;
-  --nav-font: "Poppins", sans-serif !important;
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" ;
+  --heading-font: "Source Sans Pro", sans-serif ;
+  --nav-font: "Poppins", sans-serif ;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
@@ -83,6 +83,21 @@ h6 {
   text-shadow: 2px 2px 4px #2e2c2c;
   color: var(--accentnew-color) !important;
 }
+.rotating-gear {
+  display: inline-block;
+  animation: rotate360 2s linear infinite;
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
 /* Pulsating Play Button
 ------------------------------*/
 .pulsating-play-btn {
@@ -865,6 +880,12 @@ h6 {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
   color: var(--contrast-color);
+  padding: 0.75rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.hero .btn {
   padding: 0.75rem 2.5rem;
   border-radius: 50px;
   font-weight: 500;
