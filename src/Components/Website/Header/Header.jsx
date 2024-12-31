@@ -79,10 +79,12 @@ const Header = () => {
                     />
                 </nav>
                 <div className="d-flex align-items-center ">
-                    <Link className="pe-2" to="#">
+                    <Link className="pe-3" to="#">
                         <i className="bi bi-bag-dash fs-2 myicon"></i>
+
                     </Link>
-                    <Link className="ps-2" to="#">
+
+                    <Link className="ps-2" to="/login">
                         <i className="bi bi-person-circle fs-2 myicon"></i>
                     </Link>
                 </div>

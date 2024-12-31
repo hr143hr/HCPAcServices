@@ -10,6 +10,11 @@ import NewAc from './Pages/Website/NewAc';
 import AcParts from './Pages/Website/AcParts';
 import Cart from './Pages/Website/Cart';
 import AcServices from './Pages/Website/AcServices';
+import Login from './Components/Website/Login/Login';
+import Vendor from './Components/Website/SignUp/Vendor';
+import ServiceMan from './Components/Website/SignUp/ServiceMan';
+import UserSignUp from './Components/Website/SignUp/UserSignUp';
+
 function App() {
 
   return (
@@ -18,15 +23,19 @@ function App() {
         <Routes>
           <Route path="/" element={<WebLayout />}>
             <Route index element={<Home />} />
-            <Route path="about" element={<About/>} />
-            <Route path="services" element={<Services/>} />
-            <Route path="contact" element={<Contact/>} />
-            <Route path="product" element={<Product/>} />
-            <Route path="newac" element={<NewAc/>} />
-            <Route path="acaccessories" element={<AcParts/>} />
-            <Route path="acservices" element={<AcServices/>} />
-            <Route path="cart" element={<Cart/>} />
+            <Route path="about" element={<About />} />
+            <Route path="services" element={<Services />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="product" element={<Product />} />
+            <Route path="newac" element={<NewAc />} />
+            <Route path="acaccessories" element={<AcParts />} />
+            <Route path="acservices" element={<AcServices />} />
+            <Route path="cart" element={<Cart />} />
           </Route>
+          <Route path="/login" element={<Login />} />
+          <Route path="/vendor" element={<Vendor />} />
+          <Route path="/serviceman" element={<ServiceMan />} />
+          <Route path="/usersignup" element={<UserSignUp />} />
         </Routes>
       </BrowserRouter>
     </>
